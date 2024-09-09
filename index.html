@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Out Your Soulmate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Out Your Soulmate</h1>
+        <div id="quizContainer">
+            <div class="question-page" id="page1">
+                <label for="q1">1. What qualities do you look for in your soulmate?</label>
+                <textarea id="q1" name="q1" rows="4"></textarea>
+                <button onclick="nextPage(2)">Next</button>
+            </div>
+            <div class="question-page hidden" id="page2">
+                <label for="q2">2. What activities do you see yourself doing with them?</label>
+                <textarea id="q2" name="q2" rows="4"></textarea>
+                <button onclick="prevPage(1)">Previous</button>
+                <button onclick="nextPage(3)">Next</button>
+            </div>
+            <div class="question-page hidden" id="page3">
+                <label for="q3">3. Ideal Date?</label>
+                <textarea id="q3" name="q3" rows="4"></textarea>
+                <button onclick="prevPage(2)">Previous</button>
+                <button onclick="nextPage(4)">Next</button>
+            </div>
+            <div class="question-page hidden" id="page4">
+                <label for="q4">4. How would you describe yourself?</label>
+                <textarea id="q4" name="q4" rows="4"></textarea>
+                <button onclick="prevPage(3)">Previous</button>
+                <button onclick="submitQuiz()">Submit</button>
+            </div>
+            <div id="result" class="hidden">
+                <div class="result-header">
+                    <h2><strong>Soulmate: Str4hm</strong></h2>
+                    <img src="marianne.png" alt="Marianne">
+                </div>
+                <button id="revealAnswersButton" onclick="revealAnswers()">Reveal Your Answers</button>
+                <div id="answersContainer" class="hidden">
+                    <table>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                        </tr>
+                        <tr>
+                            <td>1. What qualities do you look for in your soulmate?</td>
+                            <td id="answer1"></td>
+                        </tr>
+                        <tr>
+                            <td>2. What activities do you see yourself doing with them?</td>
+                            <td id="answer2"></td>
+                        </tr>
+                        <tr>
+                            <td>3. Ideal Date?</td>
+                            <td id="answer3"></td>
+                        </tr>
+                        <tr>
+                            <td>4. How would you describe yourself?</td>
+                            <td id="answer4"></td>
+                        </tr>
+                    </table>
+                </div>
+                <button onclick="retakeQuiz()">Retake Quiz</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
